@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory-Based Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Memory-Based Chat</h2>
+
+  <!-- Memory Input -->
+  <textarea id="memoryInput" placeholder="Paste old chats or memories here..."></textarea>
+  <label class="disclaimer-box">
+  <input type="checkbox" id="agreeDisclaimer">
+  I understand this is a memory-based simulation and not a real person.
+  </label>
+
+<button id="saveMemory" disabled>Create Memory Chat</button>
+
+  <!-- Chat Area -->
+  <div id="chatBox" class="hidden"></div>
+
+  <div class="input-area hidden" id="chatInputArea">
+    <input type="text" id="userInput" placeholder="Type here..." />
+    <button id="sendBtn">Send</button>
+  </div>
+
+  <p class="disclaimer">
+    This is a memory-based simulation for emotional support.  
+    It does not recreate or replace a real person.
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
