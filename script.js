@@ -1,4 +1,4 @@
-// ====== ELEMENTS ======
+
 const saveMemoryBtn = document.getElementById("saveMemory");
 const memoryInput = document.getElementById("memoryInput");
 const chatBox = document.getElementById("chatBox");
@@ -7,16 +7,16 @@ const sendBtn = document.getElementById("sendBtn");
 const chatInputArea = document.getElementById("chatInputArea");
 const agreeCheckbox = document.getElementById("agreeDisclaimer");
 
-// ====== STATE ======
+
 let memoryText = "";
 let memorySentences = [];
 
-// ====== ENABLE BUTTON ONLY AFTER DISCLAIMER ======
+
 agreeCheckbox.addEventListener("change", () => {
   saveMemoryBtn.disabled = !agreeCheckbox.checked;
 });
 
-// ====== SAVE MEMORY ======
+
 saveMemoryBtn.addEventListener("click", () => {
   memoryText = memoryInput.value.trim();
 
@@ -25,7 +25,7 @@ saveMemoryBtn.addEventListener("click", () => {
     return;
   }
 
-  // Split memory into meaningful sentences
+
   memorySentences = memoryText
     .split(/[\.\n]/)
     .map(s => s.trim())
@@ -41,7 +41,7 @@ saveMemoryBtn.addEventListener("click", () => {
   chatBox.innerHTML += `<div class="bot">Memory loaded 🙂 You can talk now.</div>`;
 });
 
-// ====== SEND MESSAGE ======
+
 sendBtn.addEventListener("click", sendMessage);
 userInput.addEventListener("keydown", e => {
   if (e.key === "Enter") sendMessage();
@@ -61,20 +61,19 @@ function sendMessage() {
   userInput.value = "";
 }
 
-// ====== MESSAGE HELPER ======
+
 function appendMessage(sender, text) {
   chatBox.innerHTML += `<div class="${sender}">${text}</div>`;
   chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// ====== CORE MEMORY LOGIC ======
+
 function generateMemoryReply(userMessage) {
   const userWords = userMessage
     .toLowerCase()
     .split(/\s+/)
     .filter(w => w.length > 3);
 
-  // Try to match memory sentences
   for (let sentence of memorySentences) {
     for (let word of userWords) {
       if (sentence.toLowerCase().includes(word)) {
@@ -83,7 +82,7 @@ function generateMemoryReply(userMessage) {
     }
   }
 
-  // Emotional fallback replies
+
   const fallbackReplies = [
     "I remember that feeling.",
     "That brings back memories.",
@@ -94,3 +93,4 @@ function generateMemoryReply(userMessage) {
 
   return fallbackReplies[Math.floor(Math.random() * fallbackReplies.length)];
 }
+
