@@ -12,7 +12,7 @@ body {
   margin: 0;
 }
 
-/* Main Card */
+
 .container {
   width: 100%;
   max-width: 420px;
@@ -22,14 +22,14 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Title */
+
 h2 {
   text-align: center;
   margin-bottom: 15px;
   color: #333;
 }
 
-/* Memory Input */
+
 textarea {
   width: 100%;
   height: 120px;
@@ -45,7 +45,7 @@ textarea:focus {
   border-color: #7c9cff;
 }
 
-/* Disclaimer */
+
 .disclaimer-box {
   display: flex;
   gap: 8px;
@@ -54,7 +54,7 @@ textarea:focus {
   color: #555;
 }
 
-/* Buttons */
+
 button {
   width: 100%;
   margin-top: 12px;
@@ -77,7 +77,7 @@ button:hover:not(:disabled) {
   background: #6887f5;
 }
 
-/* Chat Area */
+
 #chatBox {
   margin-top: 15px;
   height: 280px;
@@ -87,7 +87,7 @@ button:hover:not(:disabled) {
   border-radius: 14px;
 }
 
-/* Chat Bubbles */
+
 .user,
 .bot {
   max-width: 75%;
@@ -98,7 +98,6 @@ button:hover:not(:disabled) {
   line-height: 1.4;
 }
 
-/* User bubble */
 .user {
   margin-left: auto;
   background: #7c9cff;
@@ -106,7 +105,7 @@ button:hover:not(:disabled) {
   border-bottom-right-radius: 4px;
 }
 
-/* Bot bubble */
+
 .bot {
   margin-right: auto;
   background: #e8ecf7;
@@ -114,7 +113,7 @@ button:hover:not(:disabled) {
   border-bottom-left-radius: 4px;
 }
 
-/* Input Area */
+
 .input-area {
   display: flex;
   gap: 8px;
@@ -138,7 +137,7 @@ button:hover:not(:disabled) {
   padding: 12px 16px;
 }
 
-/* Footer Disclaimer */
+
 .disclaimer {
   font-size: 11px;
   text-align: center;
@@ -146,7 +145,8 @@ button:hover:not(:disabled) {
   margin-top: 12px;
 }
 
-/* Utility */
+
 .hidden {
   display: none;
 }
+
